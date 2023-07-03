@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+
+
+#board {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border: 0.25rem solid black;
+}
+
+#board > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 0.125rem solid black;
+}
+
+#border {
+    position: relative;
+    padding: 0 0 4rem 4rem;
+}
+
+#helper-left {
+    position: absolute;
+    width: 4rem;
+    left: 0;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+}
+
+#helper-bottom {
+    position: absolute;
+    height: 4rem;
+    left: bottom;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+#helper-left > div, #helper-bottom > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.tile-8:nth-child(2n), .tile-6:nth-child(2n), .tile-4:nth-child(2n), .tile-2:nth-child(2n), .tile-7:nth-child(2n-1), .tile-5:nth-child(2n-1), .tile-3:nth-child(2n-1), .tile-1:nth-child(2n-1) {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#numbers, #letters {
+    background-color: red;
+    position: absolute;
+}
