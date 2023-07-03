@@ -25,6 +25,10 @@ body {
     border: 0.125rem solid black;
 }
 
+.highlighted {
+    border: 0.25rem solid red !important;
+}
+
 #border {
     position: relative;
     padding: 0 0 4rem 4rem;
@@ -66,4 +70,9 @@ body {
 #knight {
     color: red;
     font-size: 3rem;
+}
+
+.type {
+    margin-bottom: 1rem;
+    text-align: center;
 }

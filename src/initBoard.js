@@ -18,7 +18,6 @@ export const initBoard = () => {
       let tile = document.createElement("div");
       tile.id = `${column}-${row}`;
       tile.classList = `tile-${row}`;
-      //tile.innerHTML = `${column}${row}`;
       board.appendChild(tile);
     });
   });
@@ -29,4 +28,15 @@ export const initBoard = () => {
     helper.innerHTML = `${column}`;
     helperBottom.append(helper);
   });
+};
+
+export const clearBoard = () => {
+  document.querySelectorAll("#board > div").forEach((d) => {
+    d.innerHTML = "";
+    d.classList.remove("highlighted");
+  });
+};
+
+export const setScore = (score) => {
+  document.querySelector("#score").innerHTML = `Moves: ${score}`;
 };
